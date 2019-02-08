@@ -1,0 +1,10 @@
+$validator = Validator::make($request->all(), [
+			   'email' => 'required|email|unique:users',
+			  //'username' => 'required|unique|max:100',
+			   'password' => 'required|min:8',
+			   'username' => 'required|string|max:50'
+		   ]);
+	   if ($validator->fails()) {
+            Session::flash('error', $validator->messages());
+            return redirect()->back()->withInput();
+       }

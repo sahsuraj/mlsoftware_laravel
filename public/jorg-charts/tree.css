@@ -1,0 +1,182 @@
+/* Basic styling */
+/* Draw the lines */
+.orgChart {
+    text-align: center;
+    position: relative;
+    overflow-x: scroll;
+}
+
+.jOrgChart {
+    display: inline-block;
+    min-height: 400px;
+    margin: 20px 0px;
+
+}
+
+.jOrgChart .linechart {
+    height: 20px;
+    width: 4px;
+}
+
+.jOrgChart .down {
+    background-color: #808080;
+    margin: 0px auto;
+}
+
+.jOrgChart .top {
+    border-top: 4px solid #808080;
+}
+
+.jOrgChart .left {
+    border-right:4px solid #808080;
+}
+
+.jOrgChart .right {
+    border-left: 4px solid #808080;
+}
+
+/* node cell */
+.jOrgChart td {
+    text-align: center;
+    vertical-align: top;
+    padding: 0;
+}
+
+/* The node */
+.jOrgChart .node {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    z-index: 10;
+    margin: -4px 4px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.jOrgChart .node .org_node {
+    width: inherit;
+    height: inherit;
+}
+
+.jOrgChart .node img {
+    width: inherit;
+    height: inherit;
+}
+
+.cgs_tooltip, .arrow:after {
+    background: #92bd56;
+    border: 2px solid #FFFFFF;
+}
+
+.cgs_tooltip {
+    background-color: #92bd56;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+    width: 200px;
+    border: 2px solid #FFFFFF;
+}
+
+.arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+
+.arrow.top {
+    top: -16px;
+    bottom: auto;
+}
+
+.arrow.left {
+    left: 20%;
+}
+
+.arrow:after {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    box-shadow: 6px 5px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.arrow.top:after {
+    bottom: -20px;
+    top: auto;
+}
+
+.cgs_tooltip .tt_un {
+    text-align: center;
+    font-weight: bold;
+    color: #305200;
+    text-shadow: 0px 1px 0px #a6d269;
+    line-height: 20px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #a0d358;
+}
+
+.cgs_tooltip .tt_row {
+    display: inline-block;
+    width: 100%;
+    font-size: 11px;
+}
+
+.cgs_tooltip .tt_row .tt_tit {
+    width: 80px;
+    float: left;
+    font-weight: bold;
+}
+
+.cgs_tooltip .tt_row .tt_am {
+    float: left;
+    font-weight: normal;
+}
+
+/* jQuery drag 'n drop */
+
+.drag-active {
+    border-style: dotted !important;
+}
+
+.drop-hover {
+    border-style: solid !important;
+    border-color: #E05E00 !important;
+}
+
+.orgChart .zoom {
+    position: absolute;
+    top: 0;
+    left: 12px;
+}
+
+.orgChart .zoom span.zoom_control {
+    font-size: 16px;
+    color: #808080;
+    font-weight: bold;
+}
+/*.node.cgsnode img {
+    margin-left: 0;
+    margin-top: -55px;
+}*/
+.node img {
+    border-radius: 50px;
+    margin-bottom: -44px;
+    margin-top: -30px;
+    max-height: 95px;
+    max-width: 91px;
+}
+.image_jorg h1 {
+    font-size: 19px;
+    margin-left: 17px;
+    margin-top: 37px;
+    position: absolute;
+}
